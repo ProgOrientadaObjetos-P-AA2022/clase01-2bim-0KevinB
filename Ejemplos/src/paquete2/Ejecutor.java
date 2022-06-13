@@ -26,18 +26,18 @@ public class Ejecutor {
         Edificio ed4 = new Edificio("Edificio Secundario");
         ed4.establecerCostos(5000.00);
 
-        Vehiculos v1 = new Vehiculos("Auto", "LBB0011", 10000);
-        Vehiculos v2 = new Vehiculos("Camioneta", "LCB0011 ", 20000);
-        Vehiculos v3 = new Vehiculos("Auto", "LBD0012", 6000);
-        Vehiculos v4 = new Vehiculos("Camioneta", "LCC0011", 25000);
-        Vehiculos v5 = new Vehiculos("Camioneta", "LDC0011", 71000);
+        Vehiculo v1 = new Vehiculo("Auto", "LBB0011", 10000);
+        Vehiculo v2 = new Vehiculo("Camioneta", "LCB0011 ", 20000);
+        Vehiculo v3 = new Vehiculo("Auto", "LBD0012", 6000);
+        Vehiculo v4 = new Vehiculo("Camioneta", "LCC0011", 25000);
+        Vehiculo v5 = new Vehiculo("Camioneta", "LDC0011", 71000);
 
         Edificio[] arreglo = new Edificio[4];
         arreglo[0] = ed1;
         arreglo[1] = ed2;
         arreglo[2] = ed3;
         arreglo[3] = ed4;
-        Vehiculos[] arregloV = new Vehiculos[5];
+        Vehiculo[] arregloV = new Vehiculo[5];
         arregloV[0] = v1;
         arregloV[1] = v2;
         arregloV[2] = v3;
@@ -46,7 +46,10 @@ public class Ejecutor {
         Empresa e1 = new Empresa();
         e1.establecerNombre("Empresa de Hojas");
         e1.establecerEdificios(arreglo);
-        e1.establecerCostoBI();
+        e1.establecerVehiculos(arregloV);
+        e1.establecerCostoBienesInmuebles();
+        e1.establecerCostoVehiculos();
+        e1.establecerCostoTotalBienes();
         System.out.println(e1);
     }
 }
